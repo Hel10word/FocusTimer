@@ -1,0 +1,42 @@
+general:
+  language: "zh-CN"
+  logLevel: "info"
+
+autoStart: true
+minimizeToTray: true
+
+cycles:
+  - name: "工作循环"
+    duration: "90m"
+    repeatCount: -1
+    prompts:
+      - type: "popup"
+        interval:
+          min: "3m"
+          max: "5m"
+        popup:
+          text: "请注意姿势，保持专注"
+          duration: "15s"
+          alwaysOnTop: true
+          backgroundColor: "#3498db"
+          textColor: "#ffffff"
+          fontSize: 16
+        sound:
+          filePath: "assets/sounds/bell.mp3"
+          loop: false
+          duration: "5s"
+          volume: 0.8
+    endPrompt:
+      type: "both"
+      popup:
+        text: "工作时间结束，请休息一下"
+        duration: "30s"
+        alwaysOnTop: true
+        backgroundColor: "#e74c3c"
+        textColor: "#ffffff"
+        fontSize: 18
+      sound:
+        filePath: "assets/sounds/break.mp3"
+        loop: true
+        duration: "10s"
+        volume: 1.0
